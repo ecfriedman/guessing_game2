@@ -6,7 +6,7 @@ if (birthPlace.toLowerCase() === 'yes' || birthPlace.toLowerCase() === 'y') {
 	alert('Seriously? Most people sense the East Coast immediatly.');
 	console.log('The user answered incorrect with: ' + birthPlace);
 } 
-if (birthPlace.toLowerCase() === 'no' || birthPlace.toLowerCase() === 'n') {
+else if (birthPlace.toLowerCase() === 'no' || birthPlace.toLowerCase() === 'n') {
 	alert('Correct.  I couldn\'t lose the New York if I tried!');
 	console.log('The user answered correct with: ' + birthPlace);
 	score ++;
@@ -54,8 +54,8 @@ if (tennis.toLowerCase() === 'yes' || tennis.toLowerCase() === 'y') {
 	alert('Correct. Note the question didn\'t ask if I was *good* at tennis.');
 }
 if (age < 39 || age > 39) {
-	var birthAge = prompt('You got my age wrong, but let\'s see if you can get this:
-		How old was I when I was born?');
+	var birthAge = prompt('You got my age wrong, but let\'s see if you can get this:  How old was I when I was born?');
+	}
 	if (birthAge === 0) {
 	alert('Nice. You\'d be surprised how many people can\'t get that one.');
 	score ++;
@@ -63,8 +63,8 @@ if (age < 39 || age > 39) {
 	alert('Seriously? Wow.');
 	}
 if (age === 39) {
-var birthAge = prompt('You knew my age, but let\'s see if you know this:
-    	 How old was I when I was born?');
+	var birthAge = prompt('You knew my age, but let\'s see if you know this:  How old was I when I was born?');
+	}
 	if (birthAge === 0) {
 	alert('Nice. You\'d be surprised how many people can\'t get that one.');
 	score ++;
@@ -72,7 +72,7 @@ var birthAge = prompt('You knew my age, but let\'s see if you know this:
 	if (birthAge < 0) {
 	alert('Seriously? Wow.');
 	}
-}
+
 
 
 	alert('Congratulation! You finished with a score of ' + score);
