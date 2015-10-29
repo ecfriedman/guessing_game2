@@ -1,79 +1,116 @@
 var score = 0;
 alert('Please answer the following questions:');
-var birthPlace = prompt('Did I grow up on the West Coast?');
 
-if (birthPlace.toLowerCase() === 'yes' || birthPlace.toLowerCase() === 'y') {
-	alert('Seriously? Most people sense the East Coast immediatly.');
-	console.log('The user answered incorrect with: ' + birthPlace);
-} 
-else if (birthPlace.toLowerCase() === 'no' || birthPlace.toLowerCase() === 'n') {
-	alert('Correct.  I couldn\'t lose the New York if I tried!');
-	console.log('The user answered correct with: ' + birthPlace);
-	score ++;
-} else {
-	alert('I don\'t feel like you are taking this game seriously at all.');
-}
+var ans1 = document.getElementById('answer1');
+var ans2 = document.getElementById('answer2');
+var ans3 = document.getElementById('answer3');
+var ans4 = document.getElementById('answer4');
+var ans5 = document.getElementById('answer5');
+var ans6 = document.getElementById('answer6');
 
-var eyeWear = prompt('Do I wear eyeglasses?')
+function Q1 () {
+	var birthPlace = prompt('Did I grow up on the West Coast?');
 
-if (eyeWear.toLowerCase() === 'yes' || eyeWear.toLowerCase() === 'y' || eyeWear.toLowerCase() === 'no' || eyeWear.toLowerCase() === 'n') {
-	alert('Correct!  Well, sort of. This was a trick question in that I do wear glasses, but only for distance.');
-	console.log('The user answered correct with: ' + eyeWear);
-	score ++;
-} else {
-	alert('Why are you wasting my time?  And your\s?');
-}
-var hugo = prompt('Do I have a dog?')
-
-if (hugo.toLowerCase() === 'no' || birthPlace.toLowerCase() === 'n') {
-	alert('Wrong! I\m surprised you haven\t heard of him, Hugo is pretty famous.');
-}
-if (hugo.toLowerCase() === 'yes' || hugo.toLowerCase() === 'y') {
-	alert('Yes!  Hugo is the best.');
-	console.log('The user answered correct with: ' + hugo);
-	score ++;
-}
-var age = prompt('How old am I?')
-
-if (age === 39) {
-	alert('Exactly.  Nice job.');
-	score ++;
-}
-if (age < 39) {
-	alert('Thank you!  However that is incorrect.  I am 39.');
-}
-if (age > 39) {
-    alert('Slow down there buddy!  I\'m on the verge of being offended.');
-}
-var tennis = prompt('Do I play tennis?')
-
-if (tennis.toLowerCase() === 'no' || tennis.toLowerCase() === 'n') {
-	alert('Wrong! I\m no Serena, but I try.');
-}
-if (tennis.toLowerCase() === 'yes' || tennis.toLowerCase() === 'y') {
-	alert('Correct. Note the question didn\'t ask if I was *good* at tennis.');
-}
-if (age < 39 || age > 39) {
-	var birthAge = prompt('You got my age wrong, but let\'s see if you can get this:  How old was I when I was born?');
+	if (birthPlace.toLowerCase() === 'yes' || birthPlace.toLowerCase() === 'y') {
+		//alert('Seriously? Most people sense the East Coast immediatly.');
+		ans1.innerHTML = 'Seriously? Most people sense the East Coast immediatly.';
+		console.log('The user answered incorrect with: ' + birthPlace);
 	}
-	if (birthAge === 0) {
-	alert('Nice. You\'d be surprised how many people can\'t get that one.');
-	score ++;
+	else if (birthPlace.toLowerCase() === 'no' || birthPlace.toLowerCase() === 'n') {
+		ans1.innerHTML = 'Correct.  I couldn\'t lose the New York if I tried!';
+		console.log('The user answered correct with: ' + birthPlace);
+		score ++;
 	} else {
-	alert('Seriously? Wow.');
+		ans1.innerHTML = 'I don\'t feel like you are taking this game seriously at all.';
 	}
-if (age === 39) {
-	var birthAge = prompt('You knew my age, but let\'s see if you know this:  How old was I when I was born?');
+}
+
+Q1();
+
+function Q2 () {
+	var eyeWear = prompt('Do I wear eyeglasses?');
+
+	if (eyeWear.toLowerCase() === 'yes' || eyeWear.toLowerCase() === 'y' || eyeWear.toLowerCase() === 'no' || eyeWear.toLowerCase() === 'n') {
+		ans2.innerHTML = 'Correct!  Well, sort of. This was a trick question in that I do wear glasses, but only for distance.';
+		console.log('The user answered correct with: ' + eyeWear);
+		score ++;
+	} else {
+		ans2.innerHTML = 'Why are you wasting my time?  And your\s?';
 	}
-	if (birthAge === 0) {
-	alert('Nice. You\'d be surprised how many people can\'t get that one.');
-	score ++;
+}
+
+Q2();
+
+function Q3 () {
+	var hugo = prompt('Do I have a dog?')
+
+	if (hugo.toLowerCase() === 'no' || hugo.toLowerCase() === 'n') {
+		ans3.innerHTML = 'Wrong! I\m surprised you haven\t heard of him, Hugo is pretty famous.';
 	}
-	if (birthAge < 0) {
-	alert('Seriously? Wow.');
+	if (hugo.toLowerCase() === 'yes' || hugo.toLowerCase() === 'y') {
+		ans3.innerHTML = 'Yes!  Hugo is the best.';
+		console.log('The user answered correct with: ' + hugo);
+		score ++;
 	}
+}
+
+Q3();
+
+var age = prompt('How old am I?')
+function Q4 () {
 
 
+	if (age === '39') {
+		ans4.innerHTML = 'Exactly.  Nice job.';
+		score ++;
+	}
+	if (age < '39') {
+		ans4.innerHTML = 'Thank you!  However that is incorrect.  I am 39.';
+	}
+	if (age > '39') {
+	    ans4.innerHTML = 'Slow down there buddy!  I\'m on the verge of being offended.';
+	}
+}
+
+Q4();
+
+function Q5 () {
+	var tennis = prompt('Do I play tennis?')
+
+	if (tennis.toLowerCase() === 'no' || tennis.toLowerCase() === 'n') {
+		ans5.innerHTML = 'Wrong! I\m no Serena, but I try.';
+	}
+	if (tennis.toLowerCase() === 'yes' || tennis.toLowerCase() === 'y') {
+		ans5.innerHTML = 'Correct. Note the question didn\'t ask if I was *good* at tennis.';
+	}
+}
+
+Q5();
+
+function Q6() {
+	if (age < '39' || age > '39') {
+		var birthAge = prompt('You got my age wrong, but let\'s see if you can get this:  How old was I when I was born?');
+
+		if (birthAge === '0') {
+			ans6.innerHTML = 'Nice. You\'d be surprised how many people can\'t get that one.';
+			score ++;
+		} else {
+			ans6.innerHTML = 'Seriously? Wow.';
+		}
+	}
+	if (age === '39') {
+		var birthAge = prompt('You knew my age, but let\'s see if you know this:  How old was I when I was born?');
+
+		if (birthAge === '0') {
+			ans6.innerHTML = 'Nice. You\'d be surprised how many people can\'t get that one.';
+			score ++;
+		} else {
+			ans6.innerHTML = 'Seriously? Wow.';
+		}
+	}
+}
+
+Q6();
 
 	alert('Congratulation! You finished with a score of ' + score);
 
