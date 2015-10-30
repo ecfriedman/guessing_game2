@@ -34,7 +34,7 @@ function Q2 () {
 	var eyeWear = prompt('Do I wear eyeglasses?');
 
 	if (eyeWear.toLowerCase() === 'yes' || eyeWear.toLowerCase() === 'y' || eyeWear.toLowerCase() === 'no' || eyeWear.toLowerCase() === 'n') {
-		ans2.classname = 'correct';
+		ans2.className = 'correct';
 		ans2.innerHTML = 'Correct!  Well, sort of. This was a trick question in that I do wear glasses, but only for distance.' + '<br><img width="200" src="images/angryrobot.jpg">';
 		console.log('The user answered correct with: ' + eyeWear);
 		score ++;
