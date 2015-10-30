@@ -13,10 +13,12 @@ function Q1 () {
 
 	if (birthPlace.toLowerCase() === 'yes' || birthPlace.toLowerCase() === 'y') {
 		//alert('Seriously? Most people sense the East Coast immediatly.');
+		ans1.className = 'incorrect';
 		ans1.innerHTML = 'Seriously? Most people sense the East Coast immediatly.';
 		console.log('The user answered incorrect with: ' + birthPlace);
 	}
 	else if (birthPlace.toLowerCase() === 'no' || birthPlace.toLowerCase() === 'n') {
+		ans1.className = 'correct';
 		ans1.innerHTML = 'Correct.  I couldn\'t lose the New York if I tried!' + '<br><img width="200" src="images/smartrobot.jpg">';
 		// '<br><img width="300" src="' + ques[i][4] + '">';
 		console.log('The user answered correct with: ' + birthPlace);
@@ -32,6 +34,7 @@ function Q2 () {
 	var eyeWear = prompt('Do I wear eyeglasses?');
 
 	if (eyeWear.toLowerCase() === 'yes' || eyeWear.toLowerCase() === 'y' || eyeWear.toLowerCase() === 'no' || eyeWear.toLowerCase() === 'n') {
+		ans2.classname = 'correct';
 		ans2.innerHTML = 'Correct!  Well, sort of. This was a trick question in that I do wear glasses, but only for distance.' + '<br><img width="200" src="images/angryrobot.jpg">';
 		console.log('The user answered correct with: ' + eyeWear);
 		score ++;
@@ -46,9 +49,11 @@ function Q3 () {
 	var hugo = prompt('Do I have a dog?')
 
 	if (hugo.toLowerCase() === 'no' || hugo.toLowerCase() === 'n') {
+		ans3.className = 'incorrect';
 		ans3.innerHTML = 'Wrong! I\m surprised you haven\t heard of him, Hugo is pretty famous.';
 	}
 	if (hugo.toLowerCase() === 'yes' || hugo.toLowerCase() === 'y') {
+		ans3.className = 'correct';
 		ans3.innerHTML = 'Yes!  Hugo is the best.' + '<br><img width="200" src="images/hallrobot.jpg">';
 		console.log('The user answered correct with: ' + hugo);
 		score ++;
@@ -62,13 +67,16 @@ function Q4 () {
 
 
 	if (age === '39') {
+		ans4.className = 'correct';
 		ans4.innerHTML = 'Exactly.  Nice job.' + '<br><img width="200" src="images/humanrobot.jpg">';
 		score ++;
 	}
 	if (age < '39') {
+		ans4.className = 'incorrect';
 		ans4.innerHTML = 'Thank you!  However that is incorrect.  I am 39.';
 	}
 	if (age > '39') {
+		ans4.className = 'incorrect';
 	    ans4.innerHTML = 'Slow down there buddy!  I\'m on the verge of being offended.';
 	}
 }
@@ -79,9 +87,11 @@ function Q5 () {
 	var tennis = prompt('Do I play tennis?')
 
 	if (tennis.toLowerCase() === 'no' || tennis.toLowerCase() === 'n') {
+		ans5.className = 'incorrect';
 		ans5.innerHTML = 'Wrong! I\m no Serena, but I try.';
 	}
 	if (tennis.toLowerCase() === 'yes' || tennis.toLowerCase() === 'y') {
+		ans5.className = 'correct';
 		ans5.innerHTML = 'Correct. Note the question didn\'t ask if I was *good* at tennis.' + '<br><img width="200" src="images/turingrobot.jpg">';
 	}
 }
@@ -93,9 +103,11 @@ function Q6() {
 		var birthAge = prompt('You got my age wrong, but let\'s see if you can get this:  How old was I when I was born?');
 
 		if (birthAge === '0') {
+			ans6.className = 'correct';
 			ans6.innerHTML = 'Nice. You\'d be surprised how many people can\'t get that one.' + '<br><img width="200" src="images/robotfeels.jpg">';
 			score ++;
 		} else {
+			ans6.className = 'incorrect';
 			ans6.innerHTML = 'Seriously? Wow.';
 		}
 	}
@@ -103,9 +115,11 @@ function Q6() {
 		var birthAge = prompt('You knew my age, but let\'s see if you know this:  How old was I when I was born?');
 
 		if (birthAge === '0') {
+			ans6.className = 'correct';
 			ans6.innerHTML = 'Nice. You\'d be surprised how many people can\'t get that one.' + '<br><img width="200" src="images/robotfeels.jpg">';
 			score ++;
 		} else {
+			ans6.className = 'incorrect';
 			ans6.innerHTML = 'Seriously? Wow.';
 		}
 	}
