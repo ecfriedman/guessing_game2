@@ -46,7 +46,7 @@ function Q2 () {
 Q2();
 
 function Q3 () {
-	var hugo = prompt('Do I have a dog?')
+	var hugo = prompt('Do I have a dog?');
 
 	if (hugo.toLowerCase() === 'no' || hugo.toLowerCase() === 'n') {
 		ans3.className = 'incorrect';
@@ -62,7 +62,7 @@ function Q3 () {
 
 Q3();
 
-var age = prompt('How old am I?')
+var age = prompt('How old am I?');
 function Q4 () {
 
 
@@ -84,7 +84,7 @@ function Q4 () {
 Q4();
 
 function Q5 () {
-	var tennis = prompt('Do I play tennis?')
+	var tennis = prompt('Do I play tennis?');
 
 	if (tennis.toLowerCase() === 'no' || tennis.toLowerCase() === 'n') {
 		ans5.className = 'incorrect';
