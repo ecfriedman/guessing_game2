@@ -12,3 +12,9 @@ October 29, 2015
 
 Chris Lee was the driver.
 Emily Friedman was the navigator.
+
+October 30, 2015
+Michael Sullivan was the driver;
+Emily Friedman was the navigator.
+
+Killer Robot provided comedy relief.

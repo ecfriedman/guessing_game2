@@ -1,0 +1,15 @@
+body {
+  background-color: yellow;
+}
+
+h2 {
+  color: pink;
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
